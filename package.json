@@ -1,5 +1,8 @@
 {
-  "name"    : "elecsound",
-  "version" : "0.1.0",
-  "main"    : "main.js"
+  "name": "elecsound",
+  "version": "0.1.0",
+  "main": "main.js",
+  "devDependencies": {
+    "electron-prebuilt": "~0.26.1"
+  }
 }
