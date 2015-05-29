@@ -5,16 +5,22 @@ function connect() {
 }
 
 function playComposition() {
-	orc = "sr = 44100" +
-  "ksmps = 32" +
-  "nchnls = 2" +
-  "0dbfs = 1" +
-  "instr 1" +
-  "aout vco2 0.5, 440" +
-  "outs aout, aout" +
-  "endin";
+	orc = " sr = 44100 \n" +
+  " ksmps = 32 \n" +
+  " nchnls = 2 \n" +
+  " 0dbfs = 1 \n" +
+  " instr 1 \n" +
+  " aout vco2 0.5, 440 \n" +
+  " outs aout, aout \n" +
+  " endin \n";
 
-  sco = "i1 0 60";
+  sco = "i1 0 60 \n";
 
-  csoundServer
+  csoundServer.send(JSON.stringify({
+    type: "PLAY",
+    composition: {
+    orchestra: orc,
+  	score: sco,
+  	compiledId: -1
+  }}));
 }
