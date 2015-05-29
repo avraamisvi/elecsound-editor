@@ -16,6 +16,5 @@ function playComposition() {
 
   sco = "i1 0 60";
 
-
   csoundServer
 }
