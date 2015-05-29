@@ -1,9 +1,15 @@
 var csoundServer;
 
+/*
+  Connects with the kcsound server.
+*/
 function connect() {
   csoundServer = new WebSocket("ws://localhost:8887");
 }
 
+/*
+  Sendo current composition to the server
+*/
 function playComposition() {
 	orc = " sr = 44100 \n" +
   " ksmps = 32 \n" +
